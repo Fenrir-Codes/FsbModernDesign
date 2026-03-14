@@ -1,0 +1,221 @@
+<div class="app-container d-flex">
+
+  <div class="sidebar-overlay"
+    [class.active]="!isSidebarCollapsed"
+    (click)="toggleSidebar()">
+  </div>
+
+  <aside class="sidebar d-flex flex-column flex-shrink-0 shadow"
+    [class.collapsed]="isSidebarCollapsed">
+
+    <div
+      class="sidebar-header d-flex align-items-center px-4 bg-white border-bottom">
+      <img src="/fsblogo.png" class="logo img-fluid" alt="fsb" routerLink="/">
+    </div>
+
+    <nav class="nav-menu d-flex flex-column mt-3">
+
+      <div class="nav-dropdown" [class.open]="isDropdownmenuOpen">
+        <div class="nav-item d-flex align-items-center"
+          (click)="toggleDropdown()">
+          <i class="fa fa-bars fa-2x menu-fa-icon me-3"></i>
+          <span class="nav-text anim-text flex-grow-1">Menu</span>
+          <i class="fa fa-chevron-right arrow-icon anim-text"
+            [class.rotated]="isDropdownmenuOpen"></i>
+        </div>
+
+        <div class="submenu main-flyout">
+          <a routerLink="/subscribe"
+            class="nav-item sub-item d-flex align-items-center">
+            <i class="fa fa-pencil fa-2x menu-fa-icon me-3"></i>
+            <span class="nav-text anim-text">Skriv dig op</span>
+          </a>
+
+          <div class="flyout-container"
+            [class.active]="activeSubmenu === 'bolig'">
+            <div class="nav-item sub-item d-flex align-items-center"
+              (click)="toggleSubmenu('bolig', $event)">
+              <i class="fa fa-search fa-2x menu-fa-icon me-3"></i>
+              <span class="nav-text anim-text">Boligsøgende</span>
+              <i class="fa fa-chevron-right arrow-icon-mini ms-auto"></i>
+            </div>
+
+            <div class="flyout-menu list-unstyled">
+              <a routerLink="/" class="nav-item fly-item">Nyt! Midlertidige
+                boliger</a>
+              <a routerLink="/" class="nav-item fly-item">Om opskrivning</a>
+              <a routerLink="/" class="nav-item fly-item">Fleksible
+                kriterier</a>
+              <a routerLink="/" class="nav-item fly-item">Når du får tilbudt en
+                bolig</a>
+              <a routerLink="/" class="nav-item fly-item">Om ventelisten</a>
+              <a routerLink="/" class="nav-item fly-item">Ledige
+                erhvervslejemål</a>
+            </div>
+          </div>
+
+          <div class="flyout-container"
+            [class.active]="activeSubmenu === 'beboer'">
+            <div class="nav-item sub-item d-flex align-items-center"
+              (click)="toggleSubmenu('beboer', $event)">
+              <i class="fa fa-user fa-2x menu-fa-icon me-3"></i>
+              <span class="nav-text anim-text">Beboer</span>
+              <i class="fa fa-chevron-right arrow-icon-mini ms-auto"></i>
+            </div>
+            <div class="flyout-menu list-unstyled">
+              <a routerLink="/" class="nav-item fly-item">Indflytning</a>
+              <a routerLink="/" class="nav-item fly-item">Få hjælp på
+                ejendomskontoret</a>
+              <a routerLink="/" class="nav-item fly-item">Sæt i stand og hold
+                ved lige</a>
+              <a routerLink="/" class="nav-item fly-item">Husleje og
+                boligstøtte</a>
+              <a routerLink="/" class="nav-item fly-item">Få indflydelse</a>
+              <a routerLink="/" class="nav-item fly-item">Fremleje</a>
+              <a routerLink="/" class="nav-item fly-item">Ny bolig</a>
+              <a routerLink="/" class="nav-item fly-item">Fraflytning</a>
+              <a routerLink="/" class="nav-item fly-item">Klage og
+                konfliktmægling</a>
+              <a routerLink="/" class="nav-item fly-item">For beboere i
+                ungdomsboliger/kollegier</a>
+              <a routerLink="/" class="nav-item fly-item">Inspiration til livet
+                i din bolig og by</a>
+            </div>
+          </div>
+
+          <div class="flyout-container"
+            [class.active]="activeSubmenu === 'beboervalgt'">
+            <div class="nav-item sub-item d-flex align-items-center"
+              (click)="toggleSubmenu('beboervalgt', $event)">
+              <i class="fa fa-users fa-2x menu-fa-icon me-3"></i>
+              <span class="nav-text anim-text">Beboervalgt</span>
+              <i class="fa fa-chevron-right arrow-icon-mini ms-auto"></i>
+            </div>
+
+            <div class="flyout-menu list-unstyled">
+              <a routerLink="/" class="nav-item fly-item">Ny i bestyrelsen</a>
+              <a routerLink="/" class="nav-item fly-item">Opgaver for afdelingsbestyrelsen</a>
+              <a routerLink="/" class="nav-item fly-item">Opgaver ved afdelingsmøder</a>
+              <a routerLink="/" class="nav-item fly-item">Økonomi og bestyrelsesarbejde</a>
+              <a routerLink="/" class="nav-item fly-item">Søg støtte til udvikling</a>
+              <a routerLink="/" class="nav-item fly-item">Hjælp fra fsb</a>
+              <a routerLink="/" class="nav-item fly-item">Energiforbrug i boligafdelingen</a>
+            </div>
+          </div>
+
+          <div class="flyout-container"
+            [class.active]="activeSubmenu === 'omfsb'">
+            <div class="nav-item sub-item d-flex align-items-center"
+              (click)="toggleSubmenu('omfsb', $event)">
+              <i class="fa fa-info fa-2x menu-fa-icon me-3"></i>
+              <span class="nav-text anim-text">Om fsb</span>
+              <i class="fa fa-chevron-right arrow-icon-mini ms-auto"></i>
+            </div>
+
+            <div class="flyout-menu list-unstyled">
+              <a routerLink="/" class="nav-item fly-item">fsb's retning</a>
+              <a routerLink="/" class="nav-item fly-item">Organisation og drift</a>
+              <a routerLink="/" class="nav-item fly-item">Job</a>
+              <a routerLink="/" class="nav-item fly-item">Indkøb</a>
+              <a routerLink="/" class="nav-item fly-item">Ydelser</a>
+              <a routerLink="/" class="nav-item fly-item">Persondata</a>
+              <a routerLink="/" class="nav-item fly-item">Boligsociale helhedsplaner</a>
+            </div>
+          </div>
+
+          <div class="flyout-container"
+            [class.active]="activeSubmenu === 'nybyggeri'">
+            <div class="nav-item sub-item d-flex align-items-center"
+              (click)="toggleSubmenu('nybyggeri', $event)">
+              <i class="fa fa-building-o fa-2x menu-fa-icon me-3"></i>
+              <span class="nav-text anim-text">Nybyggeri og renovering</span>
+              <i class="fa fa-chevron-right arrow-icon-mini ms-auto"></i>
+            </div>
+
+            <div class="flyout-menu list-unstyled">
+              <a routerLink="/" class="nav-item fly-item">Nybyggeri</a>
+              <a routerLink="/" class="nav-item fly-item">Renovering</a>
+              <a routerLink="/" class="nav-item fly-item">Værd at vide om renovering og helhedsplan</a>
+            </div>
+          </div>
+
+          <div class="flyout-container"
+            [class.active]="activeSubmenu === 'arrangementer'">
+            <div class="nav-item sub-item d-flex align-items-center"
+              (click)="toggleSubmenu('arrangementer', $event)">
+              <i class="fa fa-calendar fa-2x menu-fa-icon me-3"></i>
+              <span class="nav-text anim-text">Arrangementer</span>
+              <i class="fa fa-chevron-right arrow-icon-mini ms-auto"></i>
+            </div>
+
+            <div class="flyout-menu list-unstyled">
+              <a routerLink="/" class="nav-item fly-item">Nærhedskurser</a>
+              <a routerLink="/" class="nav-item fly-item">Afholdelse af lokale kurser</a>
+              <a routerLink="/" class="nav-item fly-item">Praktisk information</a>
+              <a routerLink="/" class="nav-item fly-item">BL's aktiviteter for beboervalgte</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a routerLink="/home" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-item d-flex align-items-center">
+        <i class="fa fa-home fa-2x menu-fa-icon me-3"></i>
+        <span class="nav-text anim-text">Hjem</span>
+      </a>
+
+      <a routerLink="/login" routerLinkActive="active"
+        class="nav-item d-flex align-items-center">
+        <i class="fa fa-sign-in fa-2x menu-fa-icon me-3"></i>
+        <span class="nav-text anim-text">Min side</span>
+      </a>
+
+      <a routerLink="/portfolio" routerLinkActive="active"
+        class="nav-item d-flex align-items-center">
+        <i class="fa fa-search fa-2x menu-fa-icon me-3"></i>
+        <span class="nav-text anim-text">Find bolig</span>
+      </a>
+
+      <a routerLink="/contact" routerLinkActive="active"
+        class="nav-item d-flex align-items-center">
+        <i class="fa fa-building fa-2x menu-fa-icon me-3"></i>
+        <span class="nav-text anim-text">Min bolig afdeling</span>
+      </a>
+
+      <a routerLink="/contact" routerLinkActive="active"
+        class="nav-item d-flex align-items-center">
+        <i class="fa fa-envelope fa-2x menu-fa-icon me-3"></i>
+        <span class="nav-text anim-text">Contact</span>
+      </a>
+
+      <a routerLink="/goodtoknow" routerLinkActive="active"
+        class="nav-item d-flex align-items-center">
+        <i class="fa fa-question-circle fa-2x menu-fa-icon me-3"></i>
+        <span class="nav-text anim-text">Værd at vide</span>
+      </a>
+
+    </nav>
+  </aside>
+
+  <main class="main-content flex-grow-1 d-flex flex-column bg-light">
+    <header class="top-bar-nav d-flex align-items-center px-3 shadow-sm">
+      <button
+        class="btn btn-success d-md-none d-flex align-items-center justify-content-center"
+        (click)="toggleSidebar()" style="width: 40px; height: 40px;">
+        <i class="fa" [class.fa-bars]="isSidebarCollapsed"
+          [class.fa-times]="!isSidebarCollapsed"></i>
+      </button>
+
+      <div class="ms-auto text-muted fw-medium d-none d-sm-block">
+        Lejeboliger i hovedstaden
+      </div>
+    </header>
+
+    <div class="page-body p-4 container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

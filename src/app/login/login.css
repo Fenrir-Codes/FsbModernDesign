@@ -1,0 +1,65 @@
+.login-container{
+    height: 100;
+}
+.text-navy {
+    color: var(--primary-blue);
+}
+
+.bg-navy {
+    background-color: var(--primary-blue);
+}
+
+.border-fsb-red {
+    border-color: var(--fsb-red) !important;
+}
+
+/* Egyedi Gombok */
+.btn-fsb-red {
+    background-color: var(--fsb-red);
+    border-color: var(--fsb-red);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-fsb-red:hover {
+    background-color: var(--fsb-red-dark);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-fsb-red-outline {
+    background-color: transparent;
+    border: 2px solid var(--fsb-red);
+    color: var(--fsb-red);
+    transition: all 0.3s ease;
+}
+
+.btn-fsb-red-outline:hover {
+    background-color: var(--fsb-red);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Input fókusz stílus */
+.custom-focus:focus {
+    border-color: var(--fsb-red);
+    box-shadow: 0 0 0 0.25rem rgba(226, 6, 19, 0.15);
+}
+
+/* Interakciók */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.transition {
+    transition: all 0.2s ease;
+}
+
+.hover-bg-light:hover {
+    background-color: #f1f3f5 !important;
+}
+
+/* Kártya finomítás */
+.card {
+    transition: transform 0.3s ease;
+}
