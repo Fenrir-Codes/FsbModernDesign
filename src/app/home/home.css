@@ -29,7 +29,7 @@ p {
 }
 
 .btn-fsb-red:hover{
-  transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
+  transform: scale(1.05) rotate(0deg) translate(0px, 0px) skewX(0deg);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   opacity: 1;
   filter: brightness(1);

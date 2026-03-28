@@ -1,0 +1,62 @@
+.text-navy {
+    color: var(--primary-blue);
+}
+
+.hero-card {
+    border-left: 6px solid var(--fsb-red) !important;
+}
+
+/* --- KÁRTYA STÍLUSOK --- */
+.info-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #dcdcdc !important;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+    background-color: #f8f8f8 !important;
+}
+
+.contact-link:hover {
+    color: var(--fsb-red) !important;
+}
+
+.highlight-box {
+    line-height: 20px;
+    border: 1px solid var(--fsb-red);
+    color: var(--fsb-red);
+}
+
+/* --- 5 OSZLOPOS RENDSZER --- */
+/* Nagyméretű monitor (5 kártya) */
+@media (min-width: 1400px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+/* Kisebb monitor/Laptop (4 kártya) */
+@media (min-width: 1100px) and (max-width: 1399px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+/* Tablet (2 kártya) */
+@media (min-width: 600px) and (max-width: 1099px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+/* Mobil (1 kártya) */
+@media (max-width: 599px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
