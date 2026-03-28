@@ -1,6 +1,6 @@
 /* src/styles.css */
 :root {
-  --primary-blue: #002b5c;
+  --primary-blue: #1a232f;
   --fsb-green: #c1d82f;
   --fsb-green-hover: #d7f035;
   --bg-main: #f8f9fa;
@@ -9,8 +9,10 @@
   --sidebar-expanded: 320px;
   --sidebar-collapsed: 120px;
   --transition-speed: 0.5s;
-  --fsb-red: #e20613;
+  --fsb-red: #c02330;
   --fsb-red-dark: #b3050f;
+  --fsb-text-blueish-color:#002A43;
+  --text-primary-white:#ffffff ;
   
   --shadow-primary: 0 2px 10px rgba(0, 0, 0, 0.2);
   /* Fluid padding: mobilon kisebb, asztalin nagyobb */

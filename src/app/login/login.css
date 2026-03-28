@@ -1,6 +1,80 @@
-.login-container{
-    height: 100;
+/* --- Kártya finomítás --- */
+.login-card {
+    background-color: #ffffff;
+    /* MOD: tisztább fehér */
+    border: none;
+    /* MOD: eltávolítva a keret */
+    border-radius: 1rem;
+    /* MOD: kerekítés növelve */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    /* MOD: lágyabb árnyék */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* --- Input mezők --- */
+.custom-focus {
+    border-radius: 0.5rem;
+    /* MOD: lekerekített input */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-focus:focus {
+    border-color: var(--fsb-red);
+    box-shadow: 0 0 0 0.25rem rgba(226, 6, 19, 0.15);
+}
+
+/* --- Gombok --- */
+.btn-fsb-red {
+    background: var(--fsb-red);
+    border: none;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    /* MOD: kerekebb gomb */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    /* MOD: finom árnyék */
+    transition: all 0.2s ease;
+}
+
+.btn-fsb-red:hover {
+    background: linear-gradient(90deg, #e20613, #ff3a3a);
+    /* MOD: finom gradient hover */
+    transform: translateY(0);
+    /* MOD: animáció kikapcsolva */
+}
+
+.btn-fsb-red-outline {
+    border: 2px solid var(--fsb-red);
+    border-radius: 0.5rem;
+    color: var(--fsb-red);
+    transition: all 0.2s ease;
+}
+
+.btn-fsb-red-outline:hover {
+    background-color: var(--fsb-red);
+    color: white;
+}
+
+/* --- Footer login option --- */
+.mitid-icon {
+    width: 60px;
+    /* MOD: kisebb, kompakt ikon */
+    transition: transform 0.2s ease;
+}
+
+.card-footer:hover .mitid-icon {
+    transform: scale(1.05);
+    /* MOD: nagyon finom hover effekt */
+}
+
+/* --- Info Card --- */
+.info-alert-card {
+    border-left-width: 5px !important;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* MOD: lágyabb árnyék */
+}
+
+/* --- Színek --- */
 .text-navy {
     color: var(--primary-blue);
 }
@@ -13,40 +87,7 @@
     border-color: var(--fsb-red) !important;
 }
 
-/* Egyedi Gombok */
-.btn-fsb-red {
-    background-color: var(--fsb-red);
-    border-color: var(--fsb-red);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.btn-fsb-red:hover {
-    background-color: var(--fsb-red-dark);
-    transform: translateY(-2px);
-    color: white;
-}
-
-.btn-fsb-red-outline {
-    background-color: transparent;
-    border: 2px solid var(--fsb-red);
-    color: var(--fsb-red);
-    transition: all 0.3s ease;
-}
-
-.btn-fsb-red-outline:hover {
-    background-color: var(--fsb-red);
-    color: white;
-    transform: translateY(-2px);
-}
-
-/* Input fókusz stílus */
-.custom-focus:focus {
-    border-color: var(--fsb-red);
-    box-shadow: 0 0 0 0.25rem rgba(226, 6, 19, 0.15);
-}
-
-/* Interakciók */
+/* --- Interakciók --- */
 .cursor-pointer {
     cursor: pointer;
 }
@@ -57,9 +98,4 @@
 
 .hover-bg-light:hover {
     background-color: #f1f3f5 !important;
-}
-
-/* Kártya finomítás */
-.card {
-    transition: transform 0.3s ease;
 }

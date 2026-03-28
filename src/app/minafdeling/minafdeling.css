@@ -1,0 +1,102 @@
+/* Arculati alapszínek */
+.text-navy {
+    color: var(--primary-blue)
+}
+
+.border-navy {
+    border: 2px solid var(--primary-blue) !important;
+}
+
+
+/* Kártya finomítások */
+.dept-card {
+    min-height: 420px;
+    border: 1px solid var(--primary-blue) !important;
+    transition: transform 0.2s ease, box-shadow 0.1s ease;
+}
+
+.dept-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title {
+    min-height: 2.5rem;
+    /* Címek egy vonalba hozása */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Gombok és szövegek */
+.x-small-text {
+    font-size: 0.75rem !important;
+}
+
+.btn-fsb-red {
+    background-color: var(--fsb-red);
+    border: none;
+    color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn-fsb-red:hover {
+    transform: scale(1.05) rotate(0deg) translate(0px, 0px) skewX(0deg);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    filter: brightness(1);
+}
+
+.btn-fsb-red-outline {
+    color: #e20613;
+    border: 2px solid #e20613;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn-fsb-red-outline:hover {
+    background-color: #fff5f5;
+    color: #e20613;
+    border-color: #e20613;
+    transform: scale(1.05) rotate(0deg) translate(0px, 0px) skewX(0deg);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    filter: brightness(1);
+}
+
+/* Kereső fókusz */
+.department-search-input:focus {
+    background-color: #fff;
+}
+
+/* 5 OSZLOPOS RENDSZER (Bootstrap kiterjesztés) */
+@media (min-width: 1400px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 20%;
+        /* 100 / 5 = 20% */
+    }
+}
+
+/* Tablet (3 oszlop) */
+@media (min-width: 992px) and (max-width: 1399px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 33.3333%;
+    }
+}
+
+/* Kisebb tablet (2 oszlop) */
+@media (min-width: 576px) and (max-width: 991px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+/* Mobil (1 oszlop) */
+@media (max-width: 575px) {
+    .row-cols-custom-5>.col {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
