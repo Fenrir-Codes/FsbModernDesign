@@ -11,6 +11,8 @@
 /* Kártya finomítások */
 .dept-card {
     min-height: 420px;
+    background-color: var(--primary-blue);
+    color: white;
     border: 1px solid var(--primary-blue) !important;
     transition: transform 0.2s ease, box-shadow 0.1s ease;
 }
@@ -22,6 +24,7 @@
 
 .card-title {
     min-height: 2.5rem;
+    font-size: 20px;
     /* Címek egy vonalba hozása */
     display: -webkit-box;
     -webkit-box-orient: vertical;

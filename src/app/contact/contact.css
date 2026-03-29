@@ -1,0 +1,122 @@
+/* Kártya alapstílus */
+.card {
+    padding: 30px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    /* Box-shadow-t a Bootstrap shadow-sm-re bíztuk, de megtartható az egyedi is */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h2,
+.card h3 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Színek */
+.dark-blue {
+    background-color: var(--primary-blue);
+    color: white !important;
+}
+
+.red {
+    background-color: var(--fsb-red);
+    color: white !important;
+}
+
+.grey {
+    background-color: #e6e9ee;
+    color: var(--primary-blue);
+}
+
+/* Telefonszámos kártya egyedi stílusa */
+.phone-list {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.phone-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+}
+
+.phone-icon {
+    width: 20px;
+    text-align: center;
+}
+
+.phone-row:last-child {
+    border-bottom: none;
+}
+
+/* Ikonok körei */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.red-icon {
+    background-color: var(--fsb-red);
+    color: white;
+}
+
+/* Gombok */
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn.dark {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.btn.red-btn {
+    background-color: var(--fsb-red);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    color: white;
+}
+
+/* Keresőmező */
+.search-box {
+    position: relative;
+    margin-top: 15px;
+}
+
+.search-btn {
+    width: 20px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.small-text {
+    font-size: 13px;
+    opacity: 0.8;
+}
