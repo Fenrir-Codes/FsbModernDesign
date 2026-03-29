@@ -14,7 +14,7 @@
     background-color: var(--primary-blue);
     color: white;
     border: 1px solid var(--primary-blue) !important;
-    transition: transform 0.2s ease, box-shadow 0.1s ease;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .dept-card:hover {
@@ -23,12 +23,16 @@
 }
 
 .card-title {
-    min-height: 2.5rem;
+    min-height: 25px;
     font-size: 20px;
     /* Címek egy vonalba hozása */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.info-section{
+    background: var(--bg-ash);
 }
 
 /* Gombok és szövegek */
@@ -58,8 +62,8 @@
 
 .btn-fsb-red-outline:hover {
     background-color: #fff5f5;
-    color: #e20613;
-    border-color: #e20613;
+    color: var(--fsb-red);
+    border-color: var(--fsb-red);
     transform: scale(1.05) rotate(0deg) translate(0px, 0px) skewX(0deg);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     opacity: 1;
@@ -68,7 +72,7 @@
 
 /* Kereső fókusz */
 .department-search-input:focus {
-    background-color: #fff;
+    background-color: white;
 }
 
 /* 5 OSZLOPOS RENDSZER (Bootstrap kiterjesztés) */
